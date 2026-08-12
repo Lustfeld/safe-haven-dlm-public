@@ -191,3 +191,5 @@ cython_debug/
 *.fdb_latexmk
 *.synctex.gz
 paper/main.pdf
+
+.DS_Store

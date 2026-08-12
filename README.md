@@ -1,14 +1,18 @@
 # safe-haven-dlm
 
 A free-data reproduction and extension of my bachelor thesis, *The Impact of Major
-Crises on Safe Haven Currencies* (Bayreuth, 2024).
+Crises on Safe Haven Currencies*, written at the Chair of Economics II
+(Prof. Dr. Hartmut Egger, Dr. Leandro Navarro) at the University of Bayreuth. The thesis
+received a Special Prize of the Deutsche Bundesbank (Regional Office in Bavaria) in 2026.
 
 ## Question
 
-Do the safe-haven relationships of the major currencies against the US dollar shift
-gradually, or in sudden jumps? The thesis found discrete break dates with a Bai-Perron
-test. Here I let the same coefficients drift continuously in a state-space model and put
-the two views next to each other.
+Do the safe-haven relationships of the major currencies against the US dollar shift in a
+few discrete jumps, or drift continuously? The thesis used a Bai-Perron test, which assumes
+discrete breaks. Here I reproduce that on free data, fix an error in the excess-return
+construction, and add a state-space model that lets the coefficients drift continuously.
+Neither settles the question on its own, but together they show when and how the
+relationships move.
 
 This is an in-sample structural analysis, not a forecasting exercise. That is a deliberate
 choice, stated here so it is not mistaken for an omission.
