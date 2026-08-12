@@ -3,7 +3,7 @@
 A free-data reproduction and extension of my bachelor thesis, *The Impact of Major
 Crises on Safe Haven Currencies*, written at the Chair of Economics II
 (Prof. Dr. Hartmut Egger, Dr. Leandro Navarro) at the University of Bayreuth. The thesis
-received a Special Prize of the Deutsche Bundesbank (Regional Office in Bavaria) in 2026.
+received a Special Prize of the Deutsche Bundesbank in 2026.
 
 ## Question
 
