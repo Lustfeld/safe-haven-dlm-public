@@ -74,6 +74,12 @@ coefficients leave the ±2 band essentially only for the EUR (S&P 500 and bond) 
 (S&P 500 only). A joint measure over the whole coefficient vector says the same: only the
 EUR clearly crosses the 95% line, peaking in mid-2011, right between its two break dates.
 
+![Joint deviation of the full coefficient vector, all four currencies](figures/dlm_joint_deviation.png)
+
+Each line is the Mahalanobis distance of a currency's whole coefficient vector from its
+constant OLS value, plotted against the 95% chi-squared line for six coefficients (threshold
+12.59); break dates are dotted.
+
 **My reading.** I fixed the signal-to-noise ratio at lambda = 1e-3 instead of estimating it,
 because the maximum-likelihood estimate collapses to zero time variation (the pile-up
 problem); I show the paths under lambda from 1e-4 to 1e-2 so the choice is transparent.
