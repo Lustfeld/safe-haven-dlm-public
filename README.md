@@ -28,16 +28,12 @@ on free data and adds the time-varying view. The break dates are CHF 2009-03 and
 
 ## Method
 
-**Core: dynamic linear model (DLM).** The regression coefficients follow a random walk and
+**Dynamic linear model (DLM).** The regression coefficients follow a random walk and
 are estimated with a Kalman filter and smoother; the observation variance is constant. The
 signal-to-noise ratio (lambda) is fixed rather than estimated by maximum likelihood. This
 is deliberate: the maximum-likelihood estimate runs into the pile-up problem (it collapses
 to zero time variation), so I fix lambda to a conservative value and show how sensitive the
 paths are to it instead.
-
-**Extension: time-varying parameters with stochastic volatility (TVP-SV).** A Bayesian
-version that lets the observation variance vary over time, estimated by MCMC (NUTS / PyMC).
-It is a finished, self-contained extension, kept separate from the DLM core.
 
 ## Data
 
@@ -64,7 +60,7 @@ Full write-up with tables, figures and interpretation: [`RESULTS.md`](RESULTS.md
 
 ## Limitations
 
-- Constant observation variance in the core DLM (the TVP-SV extension relaxes this).
+- Constant observation variance in the DLM (the in-progress stochastic-volatility extension relaxes this).
 - The random-walk state models gradual drift, not real jumps. A one-off event like the
   2015 SNB de-peg shows up as a single-day outlier, not a selected break.
 - Lambda is fixed, not estimated.
@@ -72,7 +68,9 @@ Full write-up with tables, figures and interpretation: [`RESULTS.md`](RESULTS.md
 
 ## Planned extensions
 
-See `ROADMAP.md`.
+A Bayesian extension with stochastic volatility (a time-varying observation variance),
+estimated by MCMC, is in progress in `notebooks/07_tvp_sv.ipynb`. See `ROADMAP.md` for this
+and other planned work.
 
 ## Repository structure
 
