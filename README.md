@@ -23,7 +23,7 @@ The baseline is the excess-return regression of Ranaldo and Söderlind (2010): t
 excess return of CHF, EUR, GBP and JPY against the USD, regressed on the S&P 500 return,
 the change in the 10-year US Treasury yield, an FX-volatility measure, the TED spread and
 the VIX. The thesis added a Bai-Perron break analysis. This repo reproduces that baseline
-on free data and adds the time-varying view. The corrected break dates are CHF 2009-03 and
+on free data and adds the time-varying view. The break dates are CHF 2009-03 and
 2013-04, EUR 2009-01 and 2013-03, GBP 2008-10 and 2016-07, JPY 2006-06.
 
 ## Method
