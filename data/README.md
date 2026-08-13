@@ -1,6 +1,6 @@
 # Data
 
-`levels.csv` holds daily levels from 2000-01-01 to 2024-06-30, a free-data reproduction
+`levels.csv` holds daily levels from 2000-01-01 to 2024-06-30 - a free-data reproduction
 of the safe-haven dataset (originally Bloomberg / Refinitiv).
 
 ## Columns
@@ -31,4 +31,4 @@ of the safe-haven dataset (originally Bloomberg / Refinitiv).
   as the regressor.
 - Japan's interbank series starts in 2002, so JPY_3M has fewer observations.
 
-_Downloaded: 2026-07-19_
+_Downloaded: 2026-08-13_
