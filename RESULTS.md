@@ -16,9 +16,10 @@ Significance: \* p<0.1, \*\* p<0.05, \*\*\* p<0.01.
 | R² | 0.040 | 0.023 | 0.029 | 0.141 |
 | N | 5,790 | 5,790 | 5,790 | 5,286 |
 
-All regressors are daily changes except the TED spread, which enters as a level in
-percentage points put on a daily basis (divided by 360), so its coefficient is not on the
-same scale as the others.
+One note on reading the table: every regressor is a daily change except the TED spread,
+which I put in as a level (in percentage points, divided by 360 to a daily basis). Its
+coefficient is therefore not on the same scale as the others, so I do not read it side by
+side with them.
 
 The S&P 500 correlation is significantly positive for CHF, EUR and GBP, and small and
 insignificant (negative) for the JPY. The 10-year Treasury yield is negatively correlated
@@ -47,10 +48,10 @@ same story.
 | | 2016-07-14 | 2015-05 to 2018-11 |
 | JPY | 2006-06-29 | 2004-12 to 2007-07 |
 
-The 95% intervals come from a residual bootstrap (B = 200): the break date is
-re-estimated on each resampled series within the two adjacent segments. Because
-residuals are resampled independently, the bootstrap ignores volatility clustering in
-daily returns, so the intervals are, if anything, somewhat narrow.
+The 95% intervals come from a residual bootstrap (B = 200): I re-estimate the break date
+on each resampled series within the two adjacent segments. Since I resample the residuals
+independently, the bootstrap ignores the volatility clustering that daily returns clearly
+show, so if anything these intervals are a little too narrow.
 
 A narrow interval suggests an abrupt change, a wide one a gradual shift. The GBP's second
 break lines up with Brexit (referendum 23 June 2016; Theresa May became PM on 13 July 2016,
@@ -97,10 +98,10 @@ built into the model, not proof that there are none: a real jump would come out 
 ramp. What I can say is that the biggest moves sit between the structural breaks, where the
 coefficients are furthest from their constant value, and clearly so only for the EUR.
 
-The filter is initialised at the full-sample OLS estimate with its OLS covariance, so the
-early part of each path is anchored to the full-sample value and the data is used twice.
-The ±2 band and the chi-squared threshold should therefore be read as conservative
-descriptive gauges of time variation, not as exact tests.
+One more caveat: I start the filter from the full-sample OLS estimate and its OLS
+covariance, so the early part of each path is pulled toward that full-sample value and the
+data is effectively used twice. I therefore read the ±2 band and the chi-squared threshold
+as conservative, descriptive gauges of how much the coefficients move, not as exact tests.
 
 ## Wrap-up
 
