@@ -36,6 +36,22 @@ which pushes their excess returns down when the S&P falls. The negative yield co
 (a positive correlation with the bond price) is the interest-rate and carry side of the
 same story.
 
+There is a cleaner way to state this. Safe-haven behaviour is always measured against a
+numeraire, and here that numeraire is the dollar, which is itself the strongest safe haven.
+So a positive S&P 500 coefficient does not say the franc, euro and pound are not safe
+havens; it says they are weaker havens than the dollar. Grisse and Nitschka (2015) find
+exactly this pattern for the franc: when global risk rises, the CHF appreciates against the
+euro and against typical carry-trade currencies, but depreciates against the dollar and the
+yen. Jiang, Krishnamurthy and Lustig (2021) supply the dollar side of the mechanism: foreign
+demand for US safe assets, a convenience yield, lifts the dollar in stress, so even genuine
+havens lose ground against it. Read this way, the sign that looks wrong is not a puzzle but a
+statement about the benchmark.
+
+One caveat on all of this. Outside the yen the R² is small, so the safe-haven signal is a
+minor part of daily FX variation. I read the coefficients as conditional hedging
+correlations, a currency's co-movement with global risk in the sense of Habib and Stracca
+(2012), not as anything that predicts returns.
+
 ## 2. Structural breaks (Bai-Perron)
 
 | Currency | Break date | 95% CI |
@@ -61,6 +77,13 @@ match a crisis is the JPY's single break in June 2006. It lines up instead with 
 monetary policy (the Fed raising to 5.25% on 29 June 2006, and the Bank of Japan ending its
 zero-rate policy on 14 July 2006), which I say plainly rather than force it into the crisis
 story.
+
+The yen fits a carry-trade reading. It has long been the classic funding currency: low
+rates, borrowed to buy higher-yielding currencies. Brunnermeier, Nagel and Pedersen (2009)
+show that carry trades unwind abruptly when funding liquidity and risk appetite dry up, which
+is when my coefficients move. That the yen's single break sits at a rate-cycle turn in 2006
+(the Bank of Japan ending its zero-rate policy, the Fed at 5.25%) rather than at a crisis is
+consistent with the build-up of the mid-2000s carry trade rather than its later crashes.
 
 ## 3. OLS by structural-break period
 
@@ -98,6 +121,17 @@ built into the model, not proof that there are none: a real jump would come out 
 ramp. What I can say is that the biggest moves sit between the structural breaks, where the
 coefficients are furthest from their constant value, and clearly so only for the EUR.
 
+The time variation itself is not new. Grisse and Nitschka (2015) already document that the
+link between the franc and risk factors is significant and becomes stronger in stress. What I
+add is the shape of that variation over the whole sample: a continuous-drift path next to the
+thesis's discrete breaks, so the two views can be read side by side.
+
+Why the four currencies differ is itself informative. Habib and Stracca (2012) tie safe-haven
+status to a country's net foreign asset position and external vulnerability. That the euro is
+the only currency whose coefficients clearly leave the band, and does so around 2011, fits
+the euro area's specific fragility in the sovereign-debt crisis (the ECB's "whatever it
+takes" came in July 2012) rather than a symmetric story across all four.
+
 One more caveat: I start the filter from the full-sample OLS estimate and its OLS
 covariance, so the early part of each path is pulled toward that full-sample value and the
 data is effectively used twice. I therefore read the ±2 band and the chi-squared threshold
@@ -112,3 +146,20 @@ political events, which I read as likely triggers rather than proven causes. The
 continuous-drift view next to the discrete breaks. Because it assumes smooth drift, it
 cannot settle gradual vs. jump on its own; a model that allows jumps would be needed for
 that, which I leave for later (see `ROADMAP.md`).
+
+## References
+
+Brunnermeier, M. K., Nagel, S. & Pedersen, L. H. (2009). Carry Trades and Currency Crashes.
+*NBER Macroeconomics Annual 2008*, 23, 313-347.
+
+Grisse, C. & Nitschka, T. (2015). On financial risk and the safe haven characteristics of
+Swiss franc exchange rates. *Journal of Empirical Finance*, 32, 153-164.
+
+Habib, M. M. & Stracca, L. (2012). Getting beyond carry trade: What makes a safe haven
+currency? *Journal of International Economics*, 87(1), 50-64.
+
+Jiang, Z., Krishnamurthy, A. & Lustig, H. (2021). Foreign Safe Asset Demand and the Dollar
+Exchange Rate. *Journal of Finance*, 76(3), 1049-1089.
+
+Ranaldo, A. & Söderlind, P. (2010). Safe Haven Currencies. *Review of Finance*, 14(3),
+385-407. https://doi.org/10.1093/rof/rfq007
