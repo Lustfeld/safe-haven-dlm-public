@@ -190,6 +190,9 @@ cython_debug/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-paper/main.pdf
+paper/
 
 .DS_Store
+
+# Claude Code local settings (user/machine-specific)
+.claude/settings.local.json

@@ -86,8 +86,11 @@ and other planned work.
 conda create -n dlm python=3.11
 conda activate dlm
 pip install -r requirements.txt
-# add a FRED API key to .env as FRED_API_KEY=...  (only needed to re-download in 01 and 09)
-# run the notebooks in order, 01 to 09
+# run the notebooks in order, starting at 02 - the committed data/levels.csv
+# covers the full sample, so no API key is needed
+# notebook 01 only re-downloads the raw data and requires a FRED API key in
+# .env (FRED_API_KEY=...); 09 uses the key too if present, else the committed
+# data/ted_daily.csv
 ```
 
 Notebooks 06 and 07 use MCMC and are the only slow steps.
