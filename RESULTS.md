@@ -43,6 +43,11 @@ same story.
 | | 2016-07-14 | 2015-05 to 2018-11 |
 | JPY | 2006-06-29 | 2004-12 to 2007-07 |
 
+The 95% intervals come from a residual bootstrap (B = 200): the break date is
+re-estimated on each resampled series within the two adjacent segments. Because
+residuals are resampled independently, the bootstrap ignores volatility clustering in
+daily returns, so the intervals are, if anything, somewhat narrow.
+
 A narrow interval suggests an abrupt change, a wide one a gradual shift. The GBP's second
 break lines up with Brexit (referendum 23 June 2016; Theresa May became PM on 13 July 2016,
 the day before). The first breaks of CHF, EUR and GBP all sit in the 2008 to 2009 financial
@@ -87,6 +92,11 @@ Since the random walk assumes smooth drift, the model shows no sharp jumps, but 
 built into the model, not proof that there are none: a real jump would come out as a smooth
 ramp. What I can say is that the biggest moves sit between the structural breaks, where the
 coefficients are furthest from their constant value, and clearly so only for the EUR.
+
+The filter is initialised at the full-sample OLS estimate with its OLS covariance, so the
+early part of each path is anchored to the full-sample value and the data is used twice.
+The ±2 band and the chi-squared threshold should therefore be read as conservative
+descriptive gauges of time variation, not as exact tests.
 
 ## Wrap-up
 
