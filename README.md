@@ -99,3 +99,5 @@ pip install -r requirements.txt
 
 Ranaldo, A. and Söderlind, P. (2010). Safe Haven Currencies. *Review of Finance*,
 14(3), 385-407. https://doi.org/10.1093/rof/rfq007
+
+Further references, for the interpretation of the results, are in `RESULTS.md`.
