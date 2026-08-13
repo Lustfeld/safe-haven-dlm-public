@@ -76,6 +76,9 @@ and other planned work.
 
 - `notebooks/`: 01 data, 02 baseline OLS, 03 breakpoints, 04 DLM (core), 05 diagnostics,
   06 SV motivation, 07 TVP-SV (extension), 08 state revisions, 09 daily-TED robustness
+- `notebooks/safe_haven.py`: the shared construction the notebooks import - excess
+  returns and regressors, the DLM, and the break search - so the definitions cannot
+  drift apart between notebooks
 - `data/`: `levels.csv` (committed raw levels) and derived outputs
 - `figures/`: generated figures (300 dpi)
 - `ROADMAP.md`: parked and planned work

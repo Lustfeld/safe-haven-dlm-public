@@ -16,6 +16,10 @@ Significance: \* p<0.1, \*\* p<0.05, \*\*\* p<0.01.
 | R² | 0.040 | 0.023 | 0.029 | 0.141 |
 | N | 5,790 | 5,790 | 5,790 | 5,286 |
 
+All regressors are daily changes except the TED spread, which enters as a level in
+percentage points put on a daily basis (divided by 360), so its coefficient is not on the
+same scale as the others.
+
 The S&P 500 correlation is significantly positive for CHF, EUR and GBP, and small and
 insignificant (negative) for the JPY. The 10-year Treasury yield is negatively correlated
 with all four excess returns, significant throughout. The VIX is significant only for the
