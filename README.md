@@ -60,7 +60,7 @@ Full write-up with tables, figures and interpretation: [`RESULTS.md`](RESULTS.md
 
 ## Limitations
 
-- Constant observation variance in the DLM (the in-progress stochastic-volatility extension relaxes this).
+- Constant observation variance in the DLM. Letting it vary over time (stochastic volatility) is the natural next step; see `ROADMAP.md`.
 - The random-walk state models gradual drift, not real jumps. A one-off event like the
   2015 SNB de-peg shows up as a single-day outlier, not a selected break.
 - Lambda is fixed, not estimated.
@@ -68,14 +68,13 @@ Full write-up with tables, figures and interpretation: [`RESULTS.md`](RESULTS.md
 
 ## Planned extensions
 
-A Bayesian extension with stochastic volatility (a time-varying observation variance),
-estimated by MCMC, is in progress in `notebooks/07_tvp_sv.ipynb`. See `ROADMAP.md` for this
-and other planned work.
+The natural continuation is a Bayesian extension with stochastic volatility (a
+time-varying observation variance). This and other directions are outlined in `ROADMAP.md`.
 
 ## Repository structure
 
 - `notebooks/`: 01 data, 02 baseline OLS, 03 breakpoints, 04 DLM (core), 05 diagnostics,
-  06 SV motivation, 07 TVP-SV (extension), 08 state revisions, 09 daily-TED robustness
+  06 state revisions, 07 daily-TED robustness
 - `notebooks/safe_haven.py`: the shared construction the notebooks import - excess
   returns and regressors, the DLM, and the break search - so the definitions cannot
   drift apart between notebooks
@@ -92,8 +91,11 @@ pip install -r requirements.txt
 # run the notebooks in order, starting at 02 - the committed data/levels.csv
 # covers the full sample, so no API key is needed
 # notebook 01 only re-downloads the raw data and requires a FRED API key in
-# .env (FRED_API_KEY=...); 09 uses the key too if present, else the committed
+# .env (FRED_API_KEY=...); 07 uses the key too if present, else the committed
 # data/ted_daily.csv
 ```
 
-Notebooks 06 and 07 use MCMC and are the only slow steps.
+## Reference
+
+Ranaldo, A. and Söderlind, P. (2010). Safe Haven Currencies. *Review of Finance*,
+14(3), 385-407. https://doi.org/10.1093/rof/rfq007

@@ -196,3 +196,4 @@ paper/
 
 # Claude Code local settings (user/machine-specific)
 .claude/settings.local.json
+CLAUDE.md
